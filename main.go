@@ -1,7 +1,7 @@
 package main
 
-import "fmt"
+import "learngolang/chapter2"
 
-func main(){
-  fmt.Println("Welcome to Golang!")
+func main() {
+	chapter2.New()
 }
