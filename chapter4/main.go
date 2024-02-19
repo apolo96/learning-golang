@@ -64,6 +64,10 @@ func New() {
 		}
 		fmt.Println(i)
 	}
+	// Simplify for syntax for go 1.22
+	/* for i := range 10{
+		fmt.Println(10 - i)
+	} */
 	fmt.Println("------- For Range")
 	evenVals := []int{2, 4, 6, 8, 10, 12}
 	// Get index and value of array
