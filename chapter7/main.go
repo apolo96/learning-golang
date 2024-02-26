@@ -5,6 +5,16 @@ import (
 	"time"
 )
 
+const (
+	Domingo = iota
+	Lunes
+	Martes
+	Miércoles
+	Jueves
+	Viernes
+	Sábado
+)
+
 type Score int
 type Convert func(string) Score
 type TeamScores map[string]Score
@@ -88,7 +98,11 @@ func New() {
 	fmt.Println(f1(10))
 	f2 := Adder.AddTo // func(Adder, int) int
 	fmt.Println(f2(myAdder, 15))
-
+    fmt.Println("-------- Composition and promotion")
+    Composition()
+    fmt.Println("-------- Interfaces")
+    Interfaces()
+    boot()
 }
 
 func doUpdateWrong(c Counter) {
