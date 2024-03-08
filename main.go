@@ -9,6 +9,7 @@ import (
 	"learngolang/chapter6"
 	"learngolang/chapter7"
 	"learngolang/chapter8"
+	"learngolang/chapter9"
 )
 
 func main() {
@@ -19,6 +20,7 @@ func main() {
 	chapter6.New()
 	chapter7.New()
 	chapter8.New()
+	chapter9.New()
 	search()
 	fmt.Println(runners)
 }
