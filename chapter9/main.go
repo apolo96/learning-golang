@@ -33,7 +33,7 @@ func (e ErrT) Error() string {
 }
 
 func (e ErrT) Is(target error) (isErr bool) {
-	if t, ok := target.(ErrT); ok {		
+	if t, ok := target.(ErrT); ok {
 		matchResource := t.Resource == e.Resource
 		matchCode := t.Code == e.Code
 		ignoreResource := t.Resource == "" && matchCode
@@ -77,7 +77,22 @@ func New() {
 		fmt.Println("Network is broken and Code 123 triggered:", ErrDatabase)
 	}
 
-	errors.
+	// Panic
+	for _, val := range []int{1, 2, 0, 6} {
+		div60(val)
+	}
+	//panic("Failed to bootstrap app")
+	/* Error handling Exercise */
+	Solve()
+}
+
+func div60(i int) {
+	defer func() {
+		if v := recover(); v != nil {
+			fmt.Println(v)
+		}
+	}()
+	fmt.Println(60 / i)
 }
 
 func fileChecker(name string) error {
